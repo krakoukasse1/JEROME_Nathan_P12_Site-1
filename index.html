@@ -38,6 +38,28 @@
             </div>
         </div>
     </section>
+    <section class="formulaire">
+        <h2>Me contactez</h2>
+        <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+        <form action="/page-traitement-donnees" method="post">
+          <div>
+            <label for="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Martin" required>
+          </div>
+          <div>
+            <label for="email">Votre e-mail</label>
+            <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+          </div>
+          <div>
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+          </div>
+          <div>
+            <button type="submit">Envoyer mon message</button>
+          </div>
+        </form>
+      </div>
+    </section>
     <footer>
         <p>Copyright © JEROME Nathan - 2024</p>
         <p>Date de dernière actualisation: <strong> 6 mars 2024</strong> </p>
