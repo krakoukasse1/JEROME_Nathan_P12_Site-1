@@ -1,0 +1,100 @@
+body {
+    /* Ensure the section element is a flex container */
+    .bold{
+        text-decoration: solid;
+    }
+
+    section {
+        border: 3px solid darkgreen;
+       
+        justify-content: center; /* Center the flex items horizontally */
+    }
+
+    .nav{
+        background-color: black;
+        color: white;
+        a {
+            text-decoration: white;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #000B91;
+        }
+    }
+
+    .header {
+        background-color: darkblue;
+        position: relative;
+        width: 100%; /* Ensure the section expands to full width */
+        padding: 20px; /* Add padding for better visual appearance */
+        display: flex;
+        flex-direction: column; /* Stack child elements vertically */
+        align-items: center; /* Center child elements horizontally */
+    }
+
+    /* Apply styles to individual elements within .header */
+    h1, h2 {
+        color: white; /* Change text color to white */
+    }
+
+    .rounded-img {
+        border-radius: 50%; /* Use 50% to achieve circular shape */
+        border: 2px solid grey;
+        margin-top: 10px; /* Add margin for spacing */
+        width: 30vh;
+    }
+
+    .about-me{
+        h2{
+            color: black;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+        p {
+            position: relative;
+            margin: 40px 500px;
+        }
+        .section-img{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            .img{
+                display: flex;
+                width: 60%;
+                height: 400px;
+                align-items: center;
+            }
+            .img-section{
+                width: 50%;
+                justify-content: center;
+                display: flex;
+            }
+            .text-section {
+                width: 50%;
+                align-items: center;
+                p {
+                    margin: 10px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    footer{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        img{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
