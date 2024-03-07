@@ -12,8 +12,9 @@
     <section class="nav">
         <li><ul><a href="#about-me">A propos</a></ul></li>
         <li><ul>Mes compétences</ul></li>
-        <li><ul>Mes projets</ul></li>
-        <li><ul>Me contacter</ul></li>
+        <li><ul><a href="#mes_projets">Mes projets</a></ul></li>
+        <li><ul><a href="#mon_cv">Mon CV</a></ul></li>
+        <li><ul><a href="#contact-me">Me contacter</a></ul></li>
         <li><ul>Mes réseaux</ul></li>
     </section>
     <section class="header">
@@ -21,7 +22,7 @@
         <h2>Developpeur web - Frontend</h2>
         <img class="rounded-img" src="https://media.licdn.com/dms/image/C4E03AQEI5IRK_N9t8A/profile-displayphoto-shrink_400_400/0/1598957951319?e=1715212800&v=beta&t=QoLgkOgSjgTLtC-ig-dLGTCu1ZcxMUMRJrUIdCSwVSc">
     </section>
-    <section class="about-me" id="#about-me">
+    <section class="about-me" id="about-me">
         <div class="title-section">
             <h2> A propos de moi</h2>
         </div>
@@ -38,11 +39,67 @@
             </div>
         </div>
     </section>
-    <section class="formulaire">
+    <section class="projets" id="mes_projets">
+        <h2> Mes projets</h2>
+        <div id="projet-container" class="projet-container">
+            
+            <!-- Les projets seront affichés ici -->
+        </div>
+    
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <!-- Les détails du projet seront affichés ici -->
+            </div>
+        </div>
+
+        <div id="pagination-container" class="pagination-container">
+            <!-- Les boutons de pagination seront affichés ici -->
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-details">
+                <!-- Les détails du projet seront affichés ici -->
+            </div>
+        </div>
+    </div>
+    <section class="mon_cv" id="mon_cv">
+        <h2>Mon CV</h2>
+        <p>Vous pouvez retrouver ici mon CV ou même le consulter directement si vous le souhaitez</p>
+        <!--Compatible uniquement avec Firefox, Opera mais pas chrome: <embed src="/assets/CV Nathan.pdf" width="800" height="500" type="application/pdf"/> --> 
+        <img src="assets/img/CV.jpg" width="500" height="500">
+
+        <a class="btn" role="button" href="/assets/CV Nathan.pdf" download="CV JEROME">Telecharger mon CV</a>
+    </section>
+
+    <section class="mes_reseaux" id="mes_reseau">
+        <h2>Mes différents réseaux</h2>
+        <div class="reseaux_container">
+            <div class="reseau">
+                <img width="150" height="150" src="https://img.icons8.com/ios/150/linkedin.png" alt="linkedin"/>
+                <h3> Linkedin</h3>
+            </div>
+            <div class="reseau">
+                <img width="150" height="150" src="https://img.icons8.com/ios-filled/150/twitterx--v1.png" alt="twitterx--v1"/>
+                <h3> Twitter</h3>
+            </div>
+            <div class="reseau">
+                <img width="150" height="150" src="https://img.icons8.com/ios/150/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <h3> Instagram</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulaire" id="contact-me">
         <h2>Me contactez</h2>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
-        <form action="/page-traitement-donnees" method="post">
+        <form action="https://api.web3forms.com/submit" method="POST">
           <div>
+
+            <input type="hidden" name="access_key" value="142f6af5-9477-4ba7-ae66-6d7f8254a13d">
+
             <label for="nom">Votre nom</label>
             <input type="text" id="nom" name="nom" placeholder="Martin" required>
           </div>
@@ -55,6 +112,8 @@
             <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
           </div>
           <div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
             <button type="submit">Envoyer mon message</button>
           </div>
         </form>
@@ -67,5 +126,7 @@
             <a href="https://www.linkedin.com/in/nathan-jerome-0423251b6/"><img src="https://cdn-icons-png.flaticon.com/512/61/61109.png"> Linkedin</a>
         </div>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

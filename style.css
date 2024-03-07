@@ -10,6 +10,11 @@ body section {
   border: 3px solid darkgreen;
   justify-content: center; /* Center the flex items horizontally */
 }
+body section h2 {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
 body .nav {
   background-color: black;
   color: white;
@@ -77,6 +82,21 @@ body .about-me .section-img .text-section p {
   margin: 10px;
   align-items: center;
 }
+body .mon_cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .mon_cv h2 {
+  color: black;
+  text-decoration: underline;
+}
+body .mon_cv .btn {
+  color: white;
+  background-color: green;
+  margin: 10px;
+}
 body .formulaire {
   display: flex;
   flex-direction: column;
@@ -100,10 +120,66 @@ body .formulaire textarea {
   width: 100%;
 }
 body .formulaire button {
-  margin: 10px;
   display: flex;
   align-items: center;
   width: 100%;
+  margin: 10px 0px;
+}
+body .projets h2 {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: black;
+}
+body .projets .projet-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0px;
+  align-items: center;
+  justify-content: center;
+}
+body .projets .projet-container .projet {
+  display: flex;
+  flex-direction: column;
+}
+body .projets .projet-container .projet img {
+  width: 300px;
+  height: 150px;
+}
+body .mes_reseaux .reseaux_container {
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+body .mes_reseaux .reseaux_container .reseau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: block;
+  visibility: hidden;
+}
+body .modal-content {
+  background-color: white;
+  width: 50%;
+  margin: 100px auto;
+  height: 80vh;
+  padding: 20px;
+  border-radius: 5px;
+}
+body .pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 body footer {
   background-color: black;
