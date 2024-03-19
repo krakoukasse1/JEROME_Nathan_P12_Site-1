@@ -5,7 +5,9 @@
       "image": "p1_cover.png",
       "description": "Description du projet 1",
       "date": "janvier 2023",
-      "lien": "lien_projet1.html"
+      "lien": "lien_projet1.html",
+      "imgTab": []
+
     },
     {
       "id": 2,
@@ -13,15 +15,17 @@
       "image": "p2_cover.png",
       "description": "Description du projet 2",
       "date": "février 2023",
-      "lien": "p2_cover.png"
+      "lien": "https://github.com/NathanJerome/Projet2",
+      "imgTab": []
     },
     {
       "id": 3,
       "nom": "Projet 3",
-      "image": "p3cover.png",
+      "image": "p2_cover.png",
       "description": "Description du projet 3",
       "date": "mars 2023",
-      "lien": "lien_projet3.html"
+      "lien": "lien_projet3.html",
+      "imgTab": []
     },
     {
       "id": 4,
@@ -29,7 +33,8 @@
       "image": "p4_cover.png",
       "description": "Description du projet 4",
       "date": "avril 2023",
-      "lien": "lien_projet4.html"
+      "lien": "lien_projet4.html",
+      "imgTab": []
     },
     {
       "id": 5,
@@ -37,7 +42,8 @@
       "image": "p5_cover.png",
       "description": "Description du projet 5",
       "date": "mai 2023",
-      "lien": "lien_projet5.html"
+      "lien": "lien_projet5.html",
+      "imgTab": []
     },
     {
       "id": 6,
@@ -45,7 +51,8 @@
       "image": "p6_cover.png",
       "description": "Description du projet 6",
       "date": "mars 2023",
-      "lien": "lien_projet3.html"
+      "lien": "lien_projet3.html",
+      "imgTab": []
     },
     {
       "id": 7,
@@ -53,7 +60,8 @@
       "image": "p7_cover.png",
       "description": "Description du projet 7",
       "date": "mars 2023",
-      "lien": "lien_projet3.html"
+      "lien": "lien_projet3.html",
+      "imgTab": []
     },
     {
       "id": 8,
@@ -61,7 +69,8 @@
       "image": "p8_cover.png",
       "description": "Description du projet 8",
       "date": "mars 2023",
-      "lien": "lien_projet3.html"
+      "lien": "lien_projet3.html",
+      "imgTab": []
     },
     {
       "id": 9,
@@ -69,6 +78,7 @@
       "image": "p9_cover.png",
       "description": "Description du projet 9",
       "date": "mars 2023",
-      "lien": "lien_projet3.html"
+      "lien": "https://github.com/NathanJerome/Print-it-JS",
+      "imgTab": ["print-it_1.png" , "print-it_2.png" , "print-it_3.png"]
     }
   ]

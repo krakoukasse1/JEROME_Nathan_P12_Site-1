@@ -1,20 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projetContainer = document.getElementById("projet-container");
-    const modal = document.getElementById("modal");
-    const modalDetails = document.getElementById("modal-details");
-    const closeBtn = document.querySelector(".close-btn");
     let projets; // Déclaration de la variable projets à l'extérieur de la fonction fetch
     let currentPage = 1; // Page actuelle
-
-
-    // Récupération des données depuis le fichier JSON
-    fetch('./data.json')
-        .then(response => response.json())
-        .then(data => {
-            projets = data; // Initialisation de la variable avec les données JSON
-            afficherProjets(currentPage); // Affichage des projets de la page actuelle
-        })
-        .catch(error => console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error));
 
     // Fonction pour afficher un projet
     function afficherProjet(projet) {
@@ -23,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="assets/img/${projet.image}" alt="${projet.nom}">
                 <h3>${projet.nom}</h3>
                 <p>Date: ${projet.date}</p>
-                <button OnClick="afficherModal()">Voir plus</button>
+                <button type="button" class="btn btn-primary" data-projet-id="${projet.id}">Voir plus</button>
             </div>
         `;
         return projetHTML;
@@ -41,9 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
             projetContainer.innerHTML += afficherProjet(projet);
         });
 
+        // Réattacher les écouteurs d'événements aux boutons "Voir plus"
+        attacherEcouteursVoirPlus();
+
         // Affiche les boutons de pagination
         afficherPagination();
     }
+
+    function attacherEcouteursVoirPlus() {
+        const buttons = document.querySelectorAll('.btn-primary');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const projetId = parseInt(this.getAttribute('data-projet-id'));
+                ouvrirModal(projetId);
+            });
+        });}
 
     // Fonction pour afficher les boutons de pagination
     function afficherPagination() {
@@ -60,16 +59,56 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-     // Fonction pour afficher la modale avec les détails du projet
-     function afficherModal() {
-        const projet = projets.find(p => p.id === id);
-        modal.style.visibility = "visible"
-        modalContent.innerHTML = `
-            <h2>${projet.nom}</h2>
-            <p>${projet.description}</p>
-            <p>Date: ${projet.date}</p>
-            <button><a href="${projet.lien}" target="_blank">Accéder au lien du projet</a></button>
-        `;
-        modal.style.display = "block";
+    
+
+    // Fonction pour ouvrir la modal
+    function ouvrirModal(projetId) {
+        const projet = projets.find(p => p.id === projetId);
+    
+        if (projet) {
+            const modalTitle = document.getElementById("exampleModalLabel");
+            const modalBody = document.querySelector(".modal-body");
+    
+            modalTitle.innerHTML = projet.nom;
+    
+            // Créer une balise img pour chaque image alternative dans imgTab
+            let imgTabHTML = "";
+            if (projet.imgTab) {
+                projet.imgTab.forEach(img => {
+                    imgTabHTML += `<img src="assets/img/${img}" alt="${projet.nom}">`;
+                });
+            }
+            
+            // Modifier le contenu de la modal avec les détails du projet, y compris les images alternatives
+            modalBody.innerHTML = `
+                <p>Date: ${projet.date}</p>
+                <p>Description: ${projet.description}</p>
+                <p>Lien du projet: <a href="${projet.lien}" target="_blank">${projet.lien}</a></p>
+                <div class="imgTab">${imgTabHTML}</div>
+                <!-- Ajoutez d'autres détails du projet ici si nécessaire -->
+            `;
+    
+            $('#exampleModal').modal('show');
+        } else {
+            console.error("Projet introuvable");
+        }
     }
+
+    // Récupération des données depuis le fichier JSON
+    fetch('./data.json')
+        .then(response => response.json())
+        .then(data => {
+            projets = data; // Initialisation de la variable avec les données JSON
+            afficherProjets(currentPage); // Affichage des projets de la page actuelle
+
+            // Ajout des écouteurs d'événements pour les boutons "Voir plus"
+            const buttons = document.querySelectorAll('.btn-primary');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const projetId = parseInt(this.getAttribute('data-projet-id'));
+                    ouvrirModal(projetId);
+                });
+            });
+        })
+        .catch(error => console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error));
 });

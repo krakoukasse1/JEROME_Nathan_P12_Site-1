@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="..."></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <meta charset="UTF-8">
@@ -13,7 +18,7 @@
         <li><ul><a href="#about-me">A propos</a></ul></li>
         <li><ul>Mes compétences</ul></li>
         <li><ul><a href="#mes_projets">Mes projets</a></ul></li>
-        <li><ul><a href="#mon_cv">Mon CV</a></ul></li>
+        <li><ul><a href="./assets/CV Nathan.pdf" target="_blank">Mon CV</a></ul></li>
         <li><ul><a href="#contact-me">Me contacter</a></ul></li>
         <li><ul>Mes réseaux</ul></li>
     </section>
@@ -39,6 +44,43 @@
             </div>
         </div>
     </section>
+    <section class="competences" id="mes_competences">
+        <h2> Mes compétences</h2>
+        <h3>Je dispose de multiple compétences dans plusieurs domaine comme la programmation, la bureautique ou d'autres domaines. Cette partie sera donc consacré a mettre en avant mes points fort tout en m'auto évaluant </h3>
+        <h4>Programmation</h4>
+        <article class="article-compétences">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="Description de l'image">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                </div>
+                <div class="progress-label">95%</div></div>
+        </article>
+        <article class="article-compétences">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="Description de l'image">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <div class="progress-label">90%</div>
+        </article>
+        <article class="article-compétences">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/560/original/javascript-logo-javascript-icon-transparent-free-png.png" alt="Description de l'image">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <div class="progress-label">90%</div>
+        </article>
+        <h4>Framework</h4>
+        <article class="article-compétences">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="Description de l'image">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+                <div class="progress-label">60%</div>
+        </article>
+
+    </section>
+
+    </section>
     <section class="projets" id="mes_projets">
         <h2> Mes projets</h2>
         <div id="projet-container" class="projet-container">
@@ -46,11 +88,22 @@
             <!-- Les projets seront affichés ici -->
         </div>
     
-        <div id="modal" class="modal">
-            <div id="modal-content" class="modal-content">
-                <!-- Les détails du projet seront affichés ici -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Titre de la modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Contenu de la modal...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
             </div>
         </div>
+    </div>
 
         <div id="pagination-container" class="pagination-container">
             <!-- Les boutons de pagination seront affichés ici -->
@@ -65,32 +118,6 @@
             </div>
         </div>
     </div>
-    <section class="mon_cv" id="mon_cv">
-        <h2>Mon CV</h2>
-        <p>Vous pouvez retrouver ici mon CV ou même le consulter directement si vous le souhaitez</p>
-        <!--Compatible uniquement avec Firefox, Opera mais pas chrome: <embed src="/assets/CV Nathan.pdf" width="800" height="500" type="application/pdf"/> --> 
-        <img src="assets/img/CV.jpg" width="500" height="500">
-
-        <a class="btn" role="button" href="/assets/CV Nathan.pdf" download="CV JEROME">Telecharger mon CV</a>
-    </section>
-
-    <section class="mes_reseaux" id="mes_reseau">
-        <h2>Mes différents réseaux</h2>
-        <div class="reseaux_container">
-            <div class="reseau">
-                <img width="150" height="150" src="https://img.icons8.com/ios/150/linkedin.png" alt="linkedin"/>
-                <h3> Linkedin</h3>
-            </div>
-            <div class="reseau">
-                <img width="150" height="150" src="https://img.icons8.com/ios-filled/150/twitterx--v1.png" alt="twitterx--v1"/>
-                <h3> Twitter</h3>
-            </div>
-            <div class="reseau">
-                <img width="150" height="150" src="https://img.icons8.com/ios/150/instagram-new--v1.png" alt="instagram-new--v1"/>
-                <h3> Instagram</h3>
-            </div>
-        </div>
-    </section>
 
     <section class="formulaire" id="contact-me">
         <h2>Me contactez</h2>

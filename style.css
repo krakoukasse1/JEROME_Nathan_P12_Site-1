@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   /* Ensure the section element is a flex container */
   /* Apply styles to individual elements within .header */
@@ -35,6 +36,9 @@ body .header {
   display: flex;
   flex-direction: column; /* Stack child elements vertically */
   align-items: center; /* Center child elements horizontally */
+}
+body .header h2 {
+  color: white;
 }
 body h1, body h2 {
   color: white; /* Change text color to white */
@@ -125,6 +129,57 @@ body .formulaire button {
   width: 100%;
   margin: 10px 0px;
 }
+body .competences {
+  margin-bottom: 20px;
+  text-align: center;
+}
+body .competences h3 {
+  font-weight: 100;
+}
+body .competences .article-compétences {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+body .competences .article-compétences .progress-label {
+  padding-left: 10px;
+  font-weight: bold;
+}
+body .competences .article-compétences img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
+}
+body .competences h3 {
+  margin-top: 40px;
+}
+body .competences h4 {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+}
+body .competences .progress {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  height: 15px;
+  width: 500px;
+  overflow: hidden;
+  display: inline-block;
+}
+body .competences .progress .progress-bar {
+  background-color: #4CAF50;
+  height: 100%;
+  width: 70%;
+  text-align: center;
+  line-height: 10px;
+  color: white;
+  position: relative;
+}
 body .projets h2 {
   display: flex;
   justify-content: center;
@@ -157,29 +212,14 @@ body .mes_reseaux .reseaux_container .reseau {
   flex-direction: column;
   align-items: center;
 }
-body .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: block;
-  visibility: hidden;
-}
-body .modal-content {
-  background-color: white;
-  width: 50%;
-  margin: 100px auto;
-  height: 80vh;
-  padding: 20px;
-  border-radius: 5px;
-}
 body .pagination-container {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+}
+body .modal .imgTab img {
+  width: 100%;
+  border: 1px solid gray;
 }
 body footer {
   background-color: black;
