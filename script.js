@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let imgTabHTML = "";
             if (projet.imgTab) {
                 projet.imgTab.forEach(img => {
-                    imgTabHTML += `<a href="assets/img/${img}" class="lightbox" data-lightbox="projet${projet.id}" data-title="${projet.nom}"><img src="assets/img/${img}" alt="${projet.nom}"></a>`;                });
+                    imgTabHTML += `<a href="assets/img/${img}"  data-lightbox="projet${projet.id}" data-title="${projet.nom}"><img src="assets/img/${img}" alt="${projet.nom}"></a>`;                });
             }
 
             // Modifier le contenu de la modal avec les détails du projet, y compris les images alternatives
@@ -115,30 +115,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Formulaire d'envoi
 
-    const form = document.getElementById("javascript_form");
+    const form = document.getElementById('form');
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Empêche le formulaire de se soumettre normalement
-
-        // Récupère les données du formulaire
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
         const formData = new FormData(form);
-
-        // Envoie les données à l'API via une requête AJAX
-        fetch(form.action, {
-            method: form.method,
-            body: formData
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
         })
         .then(async (response) => {
-            if (response.status === 200) {
-                window.alert("Message envoyé"); // Redirige vers la page de succès
-                console.log("oui")
+            let json = await response.json();
+            if (response.status == 200) {
+                window.alert("Votre message a bien été envoyé");
             } else {
-                // Gérer les erreurs ici si nécessaire
-                console.error('Erreur de soumission du formulaire:', response.statusText);
+                console.log(response);
+                window.alert(json.message);
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.log(error);
+            window.alert("Quelque chose n'a pas fonctionné");
+        })
+        .then(function() {
+            form.reset();
         });
     });
 });

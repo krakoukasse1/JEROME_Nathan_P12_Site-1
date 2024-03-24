@@ -10,9 +10,6 @@ body a {
   color: #99b2ff;
   text-shadow: #b6b6b6 1px 0 10px;
 }
-body .lightbox {
-  display: contents;
-}
 body .bold {
   -webkit-text-decoration: solid;
           text-decoration: solid;
