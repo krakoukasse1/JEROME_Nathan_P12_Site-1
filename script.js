@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const projetContainer = document.getElementById("projet-container");
     let projets; // Déclaration de la variable projets à l'extérieur de la fonction fetch
     let currentPage = 1; // Page actuelle
@@ -75,10 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
             let imgTabHTML = "";
             if (projet.imgTab) {
                 projet.imgTab.forEach(img => {
-                    imgTabHTML += `<img src="assets/img/${img}" alt="${projet.nom}">`;
-                });
+                    imgTabHTML += `<a href="assets/img/${img}" class="lightbox" data-lightbox="projet${projet.id}" data-title="${projet.nom}"><img src="assets/img/${img}" alt="${projet.nom}"></a>`;                });
             }
-            
+
             // Modifier le contenu de la modal avec les détails du projet, y compris les images alternatives
             modalBody.innerHTML = `
                 <p>Date: ${projet.date}</p>
@@ -111,4 +111,50 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error));
+
+
+    //Formulaire d'envoi
+
+    const form = document.getElementById("javascript_form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+        // Récupère les données du formulaire
+        const formData = new FormData(form);
+
+        // Envoie les données à l'API via une requête AJAX
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                window.alert("Message envoyé"); // Redirige vers la page de succès
+                console.log("oui")
+            } else {
+                // Gérer les erreurs ici si nécessaire
+                console.error('Erreur de soumission du formulaire:', response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTop").style.display = "block";
+    } else {
+        document.getElementById("scrollToTop").style.display = "none";
+    }
+}
+
+// Fonction pour retourner en haut de la page au clic sur la bulle
+document.getElementById("scrollToTop").onclick = function() {
+    document.body.scrollTop = 0; // Pour les navigateurs Chrome, Safari et Opera
+    document.documentElement.scrollTop = 0; // Pour les navigateurs Firefox, IE et Edge
+};

@@ -1,12 +1,25 @@
 body {
     /* Ensure the section element is a flex container */
-    
+    form {
+        width: 50%;
+    }
+
+    a{
+        color: #99b2ff;
+        text-shadow: #b6b6b6 1px 0 10px;
+      
+    }
+    .lightbox{
+        display: contents;
+    }
     .bold{
         text-decoration: solid;
     }
 
     section {
-        border: 3px solid darkgreen;
+        border: 1px solid;
+        box-shadow: 6px 4px 8px;
+        padding: 10px;
        
         justify-content: center; /* Center the flex items horizontally */
         h2 {
@@ -24,12 +37,12 @@ body {
         }
         a:hover{
             text-decoration: underline;
-            color: #000B91;
         }
     }
 
     .header {
-        background-color: darkblue;
+        background-image: url(assets/img/background/bluebackground.jpg);
+        background-size: cover;
         position: relative;
         width: 100%; /* Ensure the section expands to full width */
         padding: 20px; /* Add padding for better visual appearance */
@@ -55,6 +68,9 @@ body {
     }
 
     .about-me{
+        background-image: url(assets/img/background/vibrant-fluid-gradient-background-with-curvy-shapes_1017-32108.jpg);
+        background-size: cover;
+
         h2{
             color: black;
             display: flex;
@@ -71,7 +87,7 @@ body {
             width: 100%;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            
             .img{
                 display: flex;
                 width: 60%;
@@ -112,6 +128,8 @@ body {
     }
 
     .formulaire{
+        background-image: url(assets/img/background/SL_042620_30310_36.jpg);
+        background-position: right;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -134,15 +152,16 @@ body {
             width: 100%;
         }
         button{
-            display: flex;
-            align-items: center;
+            
             width: 100%;
             margin: 10px 0px;
         }
     }
     .competences {
-        margin-bottom: 20px;
+        padding-bottom: 20px;
         text-align: center; // Centrer le texte
+        background-image: url(assets/img/background/bluebackground2.jpg);
+        background-size: cover;
         h3 {
             font-weight: 100;
         }
@@ -201,6 +220,7 @@ body {
     }
 
     .projets{
+        background-image: url(assets/img/background/lilac-acrylic-texture-background-wallpaper_53876-104015.jpg);
         h2{
             display: flex;
             justify-content: center;
@@ -217,8 +237,10 @@ body {
             .projet {
                 display: flex;
                 flex-direction: column;
+                width: 21%;
+                padding-right: 15px;
                 img{
-                    width: 300px;
+                    width: 100%;
                     height: 150px;
                 }
                
@@ -261,6 +283,18 @@ body {
     }
     
     .modal {
+
+        
+        .modal-content {
+            width: 100%; /* Largeur de la modal (80% de la largeur de la fenêtre) */
+            max-width: 1000px;
+            min-height: 400px;
+            max-height: 900px;
+        }
+        .modal-body {
+            max-height: calc(100vh - 200px); /* Hauteur maximale de la modal (100% de la hauteur de la fenêtre moins 200px) */
+            overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la hauteur de la modal */
+        }
         .imgTab {
             img {
                 width: 100%;
@@ -281,5 +315,102 @@ body {
             width: 30px;
             height: 30px;
         }
+        p {
+            text-align: center;
+        }
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        font-size: 24px;
+        display: none; /* Masquer initialement la bulle */
+    }
+    
+    .scroll-to-top:hover {
+        background-color: #0056b3;
     }
 }
+
+// Pour les version mobile
+
+@media (max-width: 640px) {
+
+    body{
+
+        .about-me{
+            .title-section {
+                padding: 15px;
+            }
+
+            .section-img{
+                flex-direction: column;
+                .img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .projets{
+
+            .projet-container{
+
+                display: flex;
+                flex-direction: column;
+                margin: 15px 0px;
+                align-items: center;
+                justify-content: center;
+
+                .projet{
+                    display: flex;
+                    flex-direction: column;
+                    width: 68%;
+                    padding-right: 15px;
+                    padding: 10px;
+
+                    img{
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        #exampleModal{
+            left: 42px;
+        }
+
+        .modal {
+
+        
+            .modal-content {
+                width: 80%; /* Largeur de la modal (80% de la largeur de la fenêtre) */
+                max-width: 1000px;
+                min-height: 400px;
+                max-height: 700px;
+            }
+            .modal-body {
+                max-height: calc(100vh - 200px); /* Hauteur maximale de la modal (100% de la hauteur de la fenêtre moins 200px) */
+                overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la hauteur de la modal */
+            }
+            .imgTab {
+                img {
+                    width: 100%;
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+
+
+}
+

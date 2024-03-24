@@ -3,7 +3,9 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="..."></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
@@ -11,21 +13,22 @@
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de présentation de mes différents projets effectués avec un formualaire de contact pour me joindre si vous êtes interessé par mon profil.">
     <title>Portefefolio - JEROME Nathan</title>
 </head>
 <body>
     <section class="nav">
         <li><ul><a href="#about-me">A propos</a></ul></li>
-        <li><ul>Mes compétences</ul></li>
+        <li><ul><a href="#mes_competences">Mes compétences</a></ul></li>
         <li><ul><a href="#mes_projets">Mes projets</a></ul></li>
         <li><ul><a href="./assets/CV Nathan.pdf" target="_blank">Mon CV</a></ul></li>
         <li><ul><a href="#contact-me">Me contacter</a></ul></li>
-        <li><ul>Mes réseaux</ul></li>
     </section>
     <section class="header">
+        <div class="scroll-to-top" id="scrollToTop">&#8593;</div>
         <h1>JEROME Nathan - Portefolio</h1>
         <h2>Developpeur web - Frontend</h2>
-        <img class="rounded-img" src="https://media.licdn.com/dms/image/C4E03AQEI5IRK_N9t8A/profile-displayphoto-shrink_400_400/0/1598957951319?e=1715212800&v=beta&t=QoLgkOgSjgTLtC-ig-dLGTCu1ZcxMUMRJrUIdCSwVSc">
+        <img class="rounded-img" src="https://media.licdn.com/dms/image/C4E03AQEI5IRK_N9t8A/profile-displayphoto-shrink_400_400/0/1598957951319?e=1715212800&v=beta&t=QoLgkOgSjgTLtC-ig-dLGTCu1ZcxMUMRJrUIdCSwVSc" alt="Image de l'auteur du site, moi même">
     </section>
     <section class="about-me" id="about-me">
         <div class="title-section">
@@ -33,7 +36,7 @@
         </div>
         <div class="section-img">
             <div class="img-section">
-                <img class="img" src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg">
+                <img class="img" src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" alt="Image d'un developpeur travaillant">
             </div>
             <div class="text-section">
                 <p>Nathan, 24 ans actuellement et développeur débutant depuis près de 7 ans.</p>
@@ -49,21 +52,21 @@
         <h3>Je dispose de multiple compétences dans plusieurs domaine comme la programmation, la bureautique ou d'autres domaines. Cette partie sera donc consacré a mettre en avant mes points fort tout en m'auto évaluant </h3>
         <h4>Programmation</h4>
         <article class="article-compétences">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="Description de l'image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML">
                 <div class="progress">
                     <div class="progress-bar" style="width: 95%;"></div>
                 </div>
                 <div class="progress-label">95%</div></div>
         </article>
         <article class="article-compétences">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="Description de l'image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="Logo CSS">
                 <div class="progress">
                     <div class="progress-bar" style="width: 90%;"></div>
                 </div>
                 <div class="progress-label">90%</div>
         </article>
         <article class="article-compétences">
-            <img src="https://static.vecteezy.com/system/resources/previews/027/127/560/original/javascript-logo-javascript-icon-transparent-free-png.png" alt="Description de l'image">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/560/original/javascript-logo-javascript-icon-transparent-free-png.png" alt="Logo Javascript">
                 <div class="progress">
                     <div class="progress-bar" style="width: 90%;"></div>
                 </div>
@@ -71,7 +74,7 @@
         </article>
         <h4>Framework</h4>
         <article class="article-compétences">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="Description de l'image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="Logo REACT">
                 <div class="progress">
                     <div class="progress-bar" style="width: 50%;"></div>
                 </div>
@@ -122,38 +125,37 @@
     <section class="formulaire" id="contact-me">
         <h2>Me contactez</h2>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id="javascript_form" method="POST">
           <div>
-
             <input type="hidden" name="access_key" value="142f6af5-9477-4ba7-ae66-6d7f8254a13d">
 
             <label for="nom">Votre nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Martin" required>
+            <input type="text" id="nom" name="nom" placeholder="Martin" class="form-control" required>
           </div>
           <div>
             <label for="email">Votre e-mail</label>
-            <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+            <input type="email" id="email" name="email" placeholder="monadresse@mail.com" class="form-control" required>
           </div>
           <div>
             <label for="message">Votre message</label>
-            <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+            <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." class="form-control" required></textarea>
           </div>
           <div>
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-            <button type="submit">Envoyer mon message</button>
+            <button type="submit" class="btn btn-primary">Envoyer mon message</button>
           </div>
         </form>
       </div>
     </section>
     <footer>
         <p>Copyright © JEROME Nathan - 2024</p>
-        <p>Date de dernière actualisation: <strong> 6 mars 2024</strong> </p>
+        <p>Date de dernière actualisation: <strong> 20 mars 2024</strong> </p>
         <div class="social">
-            <a href="https://www.linkedin.com/in/nathan-jerome-0423251b6/"><img src="https://cdn-icons-png.flaticon.com/512/61/61109.png"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/nathan-jerome-0423251b6/"><img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="Image de Linkedin"> Linkedin</a>
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2/dist/js/lightbox.min.js"></script>
+    
 
 </body>
 </html>

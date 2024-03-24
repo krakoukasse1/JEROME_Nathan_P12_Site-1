@@ -3,82 +3,100 @@
       "id": 1,
       "nom": "Projet 1",
       "image": "p1_cover.png",
-      "description": "Description du projet 1",
-      "date": "janvier 2023",
+      "description": "Ce projet est le début de ma formation avec OpenClassRoom. Une partie étais consacré a remplir ma fiche de présentation",
+      "date": "juillet 2023",
       "lien": "lien_projet1.html",
-      "imgTab": []
+      "imgTab": ["p1_tab1.png"]
 
     },
     {
       "id": 2,
       "nom": "Projet 2",
       "image": "p2_cover.png",
-      "description": "Description du projet 2",
-      "date": "février 2023",
+      "description": "Ce 2nd projet avec OpenClassRoom visant a mettre les premiers pas dans le language HTML et CSS en modifiant le code d'une page d'une association en rajoutant une section dediée au membres fondateurs",
+      "date": "Aout 2023",
       "lien": "https://github.com/NathanJerome/Projet2",
-      "imgTab": []
+      "imgTab": ["p2_tab1.png"]
     },
     {
       "id": 3,
       "nom": "Projet 3",
-      "image": "p2_cover.png",
-      "description": "Description du projet 3",
-      "date": "mars 2023",
-      "lien": "lien_projet3.html",
-      "imgTab": []
+      "image": "p3_cover.png",
+      "description": "Ce 3éme projet permettais de montrer et d'approfondir mes conaissance avec le langage HTML et CSS mais également au responsive mobile pour un site d'hebergement",
+      "date": "Aout 2023",
+      "lien": "https://github.com/NathanJerome/booki-starter-code-master",
+      "imgTab": ["p3_tab1.png","p3_tab2.png"]
     },
     {
       "id": 4,
       "nom": "Projet 4",
       "image": "p4_cover.png",
-      "description": "Description du projet 4",
-      "date": "avril 2023",
-      "lien": "lien_projet4.html",
-      "imgTab": []
+      "description": "Une version plus complexe pour ce P4 qui proposais un site a creer intégralement et a le faire correspondre correctement de manière Responsive",
+      "date": "Septembre 2023",
+      "lien": "https://github.com/NathanJerome/OnMyFood",
+      "imgTab": ["p4_tab1.png","p4_tab2.png"]
     },
     {
       "id": 5,
       "nom": "Projet 5",
       "image": "p5_cover.png",
-      "description": "Description du projet 5",
-      "date": "mai 2023",
-      "lien": "lien_projet5.html",
-      "imgTab": []
+      "description": "Premier projet pour travailler sur le language Javascript avec l'inclusion d'un slidder et d'une bannière de changer dynamiquement la bannière",
+      "date": "Septembre 2023",
+      "lien": "https://github.com/NathanJerome/Print-it-JS",
+      "imgTab": ["p5_tab1.png","p5_tab2.png","p5_tab3.png"]
     },
     {
       "id": 6,
       "nom": "Projet 6",
       "image": "p6_cover.png",
-      "description": "Description du projet 6",
-      "date": "mars 2023",
-      "lien": "lien_projet3.html",
-      "imgTab": []
+      "description": "Projet regroupant toutes les conaissances en HTML, CSS et JS tout en combinant le backend avec une API Swagger pour un site de photographie avec l'ajout de nouvelle photo avec une catégorie",
+      "date": "Octobre 2023",
+      "lien": "https://github.com/NathanJerome/Portfolio-architecte-sophie-bluel",
+      "imgTab": ["p6_tab1.png","p6_tab2.png"]
     },
     {
       "id": 7,
       "nom": "Projet 7",
       "image": "p7_cover.png",
-      "description": "Description du projet 7",
-      "date": "mars 2023",
+      "description": "Projet de planification et de gestion d'un projet sur la mise en place des technologies, des méthodes de planification et de kanban",
+      "date": "Octobre",
       "lien": "lien_projet3.html",
-      "imgTab": []
+      "imgTab": ["p7_tab1.png","p7_tab2.png"]
     },
     {
       "id": 8,
       "nom": "Projet 8",
       "image": "p8_cover.png",
-      "description": "Description du projet 8",
-      "date": "mars 2023",
-      "lien": "lien_projet3.html",
-      "imgTab": []
+      "description": "Projet de création d'une application de location avec React",
+      "date": "Novembre 2023",
+      "lien": "https://github.com/NathanJerome/kasa",
+      "imgTab": ["p8_tab1.png"]
     },
     {
       "id": 9,
       "nom": "Projet 9",
       "image": "p9_cover.png",
-      "description": "Description du projet 9",
-      "date": "mars 2023",
-      "lien": "https://github.com/NathanJerome/Print-it-JS",
-      "imgTab": ["print-it_1.png" , "print-it_2.png" , "print-it_3.png"]
+      "description": "Projet d'optimisation d'un site de photographe sur plusieurs domaine incluant le referencement SEO, l'optimisation ainsi que l'accesibilité du site et des temps de chargement",
+      "date": "Decembre 2023",
+      "lien": "https://github.com/NathanJerome/ninacarducci.github.io",
+      "imgTab": []
+    },
+    {
+      "id": 10,
+      "nom": "Projet 10",
+      "image": "p10_cover.png",
+      "description": "Projet de débuggage d'un site d'une agence d'évements visant a procceder a des test unitaire et de debugger certains composants defectueux ",
+      "date": "Janvier 2024",
+      "lien": "https://github.com/NathanJerome/724-Events",
+      "imgTab": []
+    },
+    {
+      "id": 11,
+      "nom": "Projet 11",
+      "image": "p11_cover.png",
+      "description": "Dernier gros travail avec React et Redux pour avoir un environnement de travail efficace. Realisation de la page Login et la page Profil ainsi que la conception de l'API Swagger",
+      "date": "Fevrier 2024",
+      "lien": "https://github.com/NathanJerome/ninacarducci.github.io",
+      "imgTab": []
     }
   ]

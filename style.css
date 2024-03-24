@@ -3,12 +3,24 @@ body {
   /* Ensure the section element is a flex container */
   /* Apply styles to individual elements within .header */
 }
+body form {
+  width: 50%;
+}
+body a {
+  color: #99b2ff;
+  text-shadow: #b6b6b6 1px 0 10px;
+}
+body .lightbox {
+  display: contents;
+}
 body .bold {
   -webkit-text-decoration: solid;
           text-decoration: solid;
 }
 body section {
-  border: 3px solid darkgreen;
+  border: 1px solid;
+  box-shadow: 6px 4px 8px;
+  padding: 10px;
   justify-content: center; /* Center the flex items horizontally */
 }
 body section h2 {
@@ -26,10 +38,10 @@ body .nav a {
 }
 body .nav a:hover {
   text-decoration: underline;
-  color: #000B91;
 }
 body .header {
-  background-color: darkblue;
+  background-image: url(assets/img/background/bluebackground.jpg);
+  background-size: cover;
   position: relative;
   width: 100%; /* Ensure the section expands to full width */
   padding: 20px; /* Add padding for better visual appearance */
@@ -49,6 +61,10 @@ body .rounded-img {
   margin-top: 10px; /* Add margin for spacing */
   width: 30vh;
 }
+body .about-me {
+  background-image: url(assets/img/background/vibrant-fluid-gradient-background-with-curvy-shapes_1017-32108.jpg);
+  background-size: cover;
+}
 body .about-me h2 {
   color: black;
   display: flex;
@@ -65,7 +81,6 @@ body .about-me .section-img {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 body .about-me .section-img .img {
   display: flex;
@@ -102,6 +117,8 @@ body .mon_cv .btn {
   margin: 10px;
 }
 body .formulaire {
+  background-image: url(assets/img/background/SL_042620_30310_36.jpg);
+  background-position: right;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,14 +141,14 @@ body .formulaire textarea {
   width: 100%;
 }
 body .formulaire button {
-  display: flex;
-  align-items: center;
   width: 100%;
   margin: 10px 0px;
 }
 body .competences {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  background-image: url(assets/img/background/bluebackground2.jpg);
+  background-size: cover;
 }
 body .competences h3 {
   font-weight: 100;
@@ -180,6 +197,9 @@ body .competences .progress .progress-bar {
   color: white;
   position: relative;
 }
+body .projets {
+  background-image: url(assets/img/background/lilac-acrylic-texture-background-wallpaper_53876-104015.jpg);
+}
 body .projets h2 {
   display: flex;
   justify-content: center;
@@ -196,9 +216,11 @@ body .projets .projet-container {
 body .projets .projet-container .projet {
   display: flex;
   flex-direction: column;
+  width: 21%;
+  padding-right: 15px;
 }
 body .projets .projet-container .projet img {
-  width: 300px;
+  width: 100%;
   height: 150px;
 }
 body .mes_reseaux .reseaux_container {
@@ -217,6 +239,16 @@ body .pagination-container {
   justify-content: center;
   margin-bottom: 15px;
 }
+body .modal .modal-content {
+  width: 100%; /* Largeur de la modal (80% de la largeur de la fenêtre) */
+  max-width: 1000px;
+  min-height: 400px;
+  max-height: 900px;
+}
+body .modal .modal-body {
+  max-height: calc(100vh - 200px); /* Hauteur maximale de la modal (100% de la hauteur de la fenêtre moins 200px) */
+  overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la hauteur de la modal */
+}
 body .modal .imgTab img {
   width: 100%;
   border: 1px solid gray;
@@ -233,4 +265,72 @@ body footer img {
   background-color: white;
   width: 30px;
   height: 30px;
+}
+body footer p {
+  text-align: center;
+}
+body .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  display: none; /* Masquer initialement la bulle */
+}
+body .scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 640px) {
+  body .about-me .title-section {
+    padding: 15px;
+  }
+  body .about-me .section-img {
+    flex-direction: column;
+  }
+  body .about-me .section-img .img {
+    width: 100%;
+  }
+  body .projets .projet-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  body .projets .projet-container .projet {
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    padding-right: 15px;
+    padding: 10px;
+  }
+  body .projets .projet-container .projet img {
+    width: 100%;
+    height: 150px;
+  }
+  body #exampleModal {
+    left: 42px;
+  }
+  body .modal .modal-content {
+    width: 80%; /* Largeur de la modal (80% de la largeur de la fenêtre) */
+    max-width: 1000px;
+    min-height: 400px;
+    max-height: 700px;
+  }
+  body .modal .modal-body {
+    max-height: calc(100vh - 200px); /* Hauteur maximale de la modal (100% de la hauteur de la fenêtre moins 200px) */
+    overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la hauteur de la modal */
+  }
+  body .modal .imgTab img {
+    width: 100%;
+    border: 1px solid gray;
+  }
 }/*# sourceMappingURL=style.css.map */
