@@ -218,7 +218,7 @@ body .projets .projet-container .projet {
 }
 body .projets .projet-container .projet img {
   width: 100%;
-  height: 150px;
+  height: 300px;
 }
 body .mes_reseaux .reseaux_container {
   display: flex;
