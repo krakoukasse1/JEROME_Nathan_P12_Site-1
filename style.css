@@ -36,6 +36,9 @@ body .nav a {
 body .nav a:hover {
   text-decoration: underline;
 }
+body .nav ul li {
+  list-style-type: none;
+}
 body .header {
   background-image: url(assets/img/background/bluebackground.jpg);
   background-size: cover;

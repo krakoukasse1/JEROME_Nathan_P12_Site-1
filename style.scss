@@ -37,6 +37,11 @@ body {
         a:hover{
             text-decoration: underline;
         }
+        ul{
+            li{
+                list-style-type: none;
+            }
+        }
     }
 
     .header {
